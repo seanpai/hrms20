@@ -1,0 +1,1440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b167"
+ majorVersion="8"
+ minorVersion="2"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1020"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         className=""
+         description="로봇 상태 및 모드 정보 thing shape"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2018-04-06T16:36:56.378+09:00"
+         name="HRC.HRMS.StatusModeInfo.TS"
+         projectName="HRMS20"
+         tags="HRC:HRMS">
+            <PropertyDefinitions>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="BOOLEAN"
+                 category=""
+                 description="Enable 스위치 상태"
+                 isLocalOnly="false"
+                 name="RobotEnable_EnableSw"
+                 ordinal="29"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="BOOLEAN"
+                 category=""
+                 description="ARC 용접 상태"
+                 isLocalOnly="false"
+                 name="RobotEnable_ArcStatus"
+                 ordinal="32"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="제어조건"
+                 isLocalOnly="false"
+                 name="ControlCondition"
+                 ordinal="22"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="STRING"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="RobotEnable_MotorOnOff"
+                 ordinal="28"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="STRING"
+                 category=""
+                 description="현재모드&#xA;0: 수동&#xA;1: 정수설정모드&#xA;2: 자동 1step&#xA;3: 자동 cycle&#xA;4: 자동 연속"
+                 isLocalOnly="false"
+                 name="ControlMode_Current"
+                 ordinal="24"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="동작조건"
+                 isLocalOnly="false"
+                 name="WorkingCondition"
+                 ordinal="23"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="로봇 동작상태"
+                 isLocalOnly="false"
+                 name="JobStatus"
+                 ordinal="3"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="BOOLEAN"
+                 category=""
+                 description="머신 lock 상태"
+                 isLocalOnly="false"
+                 name="RobotEnable_MachineLock"
+                 ordinal="30"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="로봇 모터 ON/OFF 등 기타 상태"
+                 isLocalOnly="false"
+                 name="RobotEnable"
+                 ordinal="2"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="BOOLEAN"
+                 category=""
+                 description="플래이백 여부"
+                 isLocalOnly="false"
+                 name="ControlMode_Playback"
+                 ordinal="25"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용입력 05"
+                 isLocalOnly="false"
+                 name="InputStatusBitFlag05"
+                 ordinal="9"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용입력 06"
+                 isLocalOnly="false"
+                 name="InputStatusBitFlag06"
+                 ordinal="10"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용입력 03"
+                 isLocalOnly="false"
+                 name="InputStatusBitFlag03"
+                 ordinal="7"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용입력 04"
+                 isLocalOnly="false"
+                 name="InputStatusBitFlag04"
+                 ordinal="8"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용입력 07"
+                 isLocalOnly="false"
+                 name="InputStatusBitFlag07"
+                 ordinal="11"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="BOOLEAN"
+                 category=""
+                 description="유지전류경감기능 사용여부"
+                 isLocalOnly="false"
+                 name="WorkingCondition_MaintCurrent"
+                 ordinal="36"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용입력 08"
+                 isLocalOnly="false"
+                 name="InputStatusBitFlag08"
+                 ordinal="12"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용입력 01"
+                 isLocalOnly="false"
+                 name="InputStatusBitFlag01"
+                 ordinal="5"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용입력 02"
+                 isLocalOnly="false"
+                 name="InputStatusBitFlag02"
+                 ordinal="6"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="로봇운용모드"
+                 isLocalOnly="false"
+                 name="ControlMode"
+                 ordinal="1"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="BOOLEAN"
+                 category=""
+                 description="고부하모드 사용 여부"
+                 isLocalOnly="false"
+                 name="LoadCondition_HighLoadMode"
+                 ordinal="33"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="BOOLEAN"
+                 category=""
+                 description="가변가감속 기능 사용여부"
+                 isLocalOnly="false"
+                 name="ControlCondition_AccDecCtrl"
+                 ordinal="35"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="BOOLEAN"
+                 category=""
+                 description="용접 GUN lock 상태"
+                 isLocalOnly="false"
+                 name="RobotEnable_GunLock"
+                 ordinal="31"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용출력 07"
+                 isLocalOnly="false"
+                 name="OutputStatusBitFlag07"
+                 ordinal="19"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="BOOLEAN"
+                 category=""
+                 description="원격제어여부"
+                 isLocalOnly="false"
+                 name="ControlMode_RemoteCtrl"
+                 ordinal="26"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용출력 06"
+                 isLocalOnly="false"
+                 name="OutputStatusBitFlag06"
+                 ordinal="18"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="부하조건"
+                 isLocalOnly="false"
+                 name="LoadConditon"
+                 ordinal="21"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용출력 08"
+                 isLocalOnly="false"
+                 name="OutputStatusBitFlag08"
+                 ordinal="20"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용출력 03"
+                 isLocalOnly="false"
+                 name="OutputStatusBitFlag03"
+                 ordinal="15"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용출력 02"
+                 isLocalOnly="false"
+                 name="OutputStatusBitFlag02"
+                 ordinal="14"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용출력 05"
+                 isLocalOnly="false"
+                 name="OutputStatusBitFlag05"
+                 ordinal="17"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용출력 04"
+                 isLocalOnly="false"
+                 name="OutputStatusBitFlag04"
+                 ordinal="16"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="BOOLEAN"
+                 category=""
+                 description="제진제어 사용여부"
+                 isLocalOnly="false"
+                 name="ControlCondition_ServoCtrl"
+                 ordinal="34"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="로봇 동작상태"
+                 isLocalOnly="false"
+                 name="JobSubStatus"
+                 ordinal="4"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description="전용출력 01"
+                 isLocalOnly="false"
+                 name="OutputStatusBitFlag01"
+                 ordinal="13"></PropertyDefinition>
+            </PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 aspect.isAsync="false"
+                 category=""
+                 description="제어조건 추출 및 해석"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="UpdateControlCondition">
+                    <ResultType
+                     baseType="NUMBER"
+                     description="Control condition"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="제어조건"
+                         name="ControlCondition"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 aspect.isAsync="false"
+                 category=""
+                 description="현재 현재 모드 업데이트"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="UpdateControlMode">
+                    <ResultType
+                     baseType="STRING"
+                     description="현재모드인덱스"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="로봇 제어 모드 값"
+                         name="ControlMode"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 aspect.isAsync="false"
+                 category=""
+                 description="부하조건 추출 및 해석"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="UpdateLoadCondition">
+                    <ResultType
+                     baseType="NUMBER"
+                     description="Load Condition"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="부하조건값"
+                         name="LoadCondition"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 aspect.isAsync="false"
+                 category=""
+                 description="모터 On/Off, Enable 스위치, GUN 상태 정보 추출 및 해석 "
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="UpdateRobotEnable">
+                    <ResultType
+                     baseType="NUMBER"
+                     description="Robot enable value"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="Robot Enable 정보"
+                         name="RobotEnable"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 aspect.isAsync="false"
+                 category=""
+                 description="동작조건 추출 및 해석"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="UpdateWorkingCondition">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="Working condition"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="동작조건"
+                         name="WorkingCondition"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings></ServiceMappings>
+            <ServiceImplementations>
+                <ServiceImplementation
+                 description=""
+                 handlerName="Script"
+                 name="UpdateControlCondition">
+                    <ConfigurationTables>
+                        <ConfigurationTable
+                         description="Script"
+                         isMultiRow="false"
+                         name="Script"
+                         ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description="code"
+                                     name="code"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code>
+                                    <![CDATA[
+                                    var MASK_1bit = 1;
+                                    var MASK_2bit = 2;
+                                    
+                                    if(ControlCondition & MASK_1bit){
+                                        // true: 제진제어사용
+                                        me.ControlCondition_ServoCtrl = true;
+                                    }
+                                    else{
+                                         me.ControlCondition_ServoCtrl = false;
+                                    }
+                                    
+                                    if(ControlCondition & MASK_2bit){
+                                        // true: 가변가감속사용
+                                        me.ControlCondition_AccDecCtrl = true;
+                                    }
+                                    else{
+                                        me.ControlCondition_AccDecCtrl = false;
+                                    }
+                                    result = ControlCondition;
+                                    ]]>
+                                    </code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description=""
+                 handlerName="Script"
+                 name="UpdateControlMode">
+                    <ConfigurationTables>
+                        <ConfigurationTable
+                         description="Script"
+                         isMultiRow="false"
+                         name="Script"
+                         ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description="code"
+                                     name="code"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code>
+                                    <![CDATA[
+                                    function bin2dec(bin){
+                                        return parseInt(bin, 2).toString(10);
+                                    }
+                                    
+                                    function dec2bin(dec){
+                                        return (dec >>> 0).toString(2);
+                                    }
+                                    
+                                    var ControlVal = ControlMode;
+                                    var CurrentCtrlVal = 0x000000FF & ControlVal;
+                                    
+                                    var keyValue = CurrentCtrlVal.toString();
+                                    var params = {
+                                    	key: keyValue /* STRING */
+                                    };
+                                    
+                                    var CtrlmodeNameinfotbl = Things["HRC.HRMS.CtrlModeName.DT"].GetDataTableEntryByKey(params);
+                                    var newEntry = new Object();
+                                    newEntry.RobCtrlModeIndex = CurrentCtrlVal; // NUMBER - isPrimaryKey = true
+                                    var FoundRow = CtrlmodeNameinfotbl.Find(newEntry);
+                                     me.ControlMode_Current = FoundRow.RobCtrlModeName;
+                                    
+                                    var PlaybackVal = (0x0000FF00 & ControlVal) >>> 8;
+                                    if(1 === PlaybackVal){
+                                        me.ControlMode_Playback = true;
+                                    }
+                                    else{
+                                         me.ControlMode_Playback = false;
+                                    }
+                                    
+                                    var RemoteCtrlVal = (0x00FF0000 & ControlVal) >>> 16;
+                                    if(1=== RemoteCtrlVal) {
+                                    	me.ControlMode_RemoteCtrl = true;
+                                    } else {
+                                    	me.ControlMode_RemoteCtrl = false;
+                                    }
+                                    
+                                    result = me.ControlMode_Current;
+                                    ]]>
+                                    </code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description=""
+                 handlerName="Script"
+                 name="UpdateLoadCondition">
+                    <ConfigurationTables>
+                        <ConfigurationTable
+                         description="Script"
+                         isMultiRow="false"
+                         name="Script"
+                         ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description="code"
+                                     name="code"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code>
+                                    <![CDATA[
+                                    LoadCondition;
+                                    
+                                    var MASK_1bit = 1;
+                                    var MASK_2bit = 2;
+                                    var MASK_3bit = 4;
+                                    
+                                    if(LoadCondition & MASK_1bit){
+                                        // true: using high load mode
+                                        me.LoadCondition_HighLoadMode = true;
+                                    }
+                                    else{
+                                        me.LoadCondition_HighLoadMode = false;
+                                    }
+                                    
+                                    if(LoadCondition & MASK_2bit){// true: complete load estimation 
+                                    }
+                                    else{
+                                    }
+                                    
+                                    if(LoadCondition & MASK_3bit){// true: using extra weight
+                                    }
+                                    else{
+                                    }
+                                    result = LoadCondition;
+                                    ]]>
+                                    </code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description=""
+                 handlerName="Script"
+                 name="UpdateRobotEnable">
+                    <ConfigurationTables>
+                        <ConfigurationTable
+                         description="Script"
+                         isMultiRow="false"
+                         name="Script"
+                         ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description="code"
+                                     name="code"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code>
+                                    <![CDATA[
+                                    var RobotStatusVal = RobotEnable;
+                                    var MotorPowVal = 0x000000FF & RobotStatusVal;
+                                    var EnableSwVal = (0x0000FF00 & RobotStatusVal) >>> 8;
+                                    var MachineLockVal = (0x00FF0000 & RobotStatusVal) >>> 16;
+                                    var GunLockVal = (0x0F000000 & RobotStatusVal) >>> 24;
+                                    var ArcStatusVal = (0xF0000000 & RobotStatusVal) >>> 28;
+                                    
+                                    var motorIndex = MotorPowVal.toString();
+                                    var params = {
+                                    	key: motorIndex /* STRING */
+                                    };
+                                    var retInfotbl = Things["HRC.HRMS.MotorStatus.DT"].GetDataTableEntryByKey(params);
+                                    
+                                    var newEntry = new Object();
+                                    newEntry.MotorStatusIndex = undefined; // INTEGER - isPrimaryKey = true
+                                    var foundRow = retInfotbl.Find(newEntry);
+                                    me.RobotEnable_MotorOnOff = foundRow.MotorStatus;
+                                    
+                                    if(1 == EnableSwVal){
+                                        me.RobotEnable_EnableSw = false; // disable
+                                    }
+                                    else{
+                                         me.RobotEnable_EnableSw = true; // enable
+                                    }
+                                    
+                                    if(1 == MachineLockVal){
+                                       me.RobotEnable_MachineLock = true; // lock
+                                    }
+                                    else{
+                                        me.RobotEnable_MachineLock = false; // unlock
+                                    }
+                                    
+                                    if(1 == GunLockVal){
+                                       me.RobotEnable_GunLock = true;	// lock
+                                    }
+                                    else{
+                                        me.RobotEnable_GunLock = false; // unlock
+                                    }
+                                    
+                                    if(1 == ArcStatusVal){
+                                       me.RobotEnable_ArcStatus = true; // ARC On
+                                    }
+                                    else{
+                                        me.RobotEnable_ArcStatus = false; // ARC Off
+                                    }
+                                    
+                                    result = RobotStatusVal;
+                                    ]]>
+                                    </code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description=""
+                 handlerName="Script"
+                 name="UpdateWorkingCondition">
+                    <ConfigurationTables>
+                        <ConfigurationTable
+                         description="Script"
+                         isMultiRow="false"
+                         name="Script"
+                         ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description="code"
+                                     name="code"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code>
+                                    <![CDATA[
+                                    var MASK_bit1 = 1;
+                                    
+                                    if( MASK_bit1 & WorkingCondition){
+                                        me.WorkingCondition_MaintCurrent = true;
+                                    }
+                                    else{
+                                        me.WorkingCondition_MaintCurrent = false;
+                                    }
+                                    result = WorkingCondition;
+                                    ]]>
+                                    </code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
+            <Subscriptions>
+                <Subscription
+                 enabled="true"
+                 eventName="DataChange"
+                 source=""
+                 sourceProperty="ControlCondition"
+                 sourceType="Thing">
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="Event.DataChange:Property.ControlCondition">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        	LoadCondition: eventData.newValue.value /* NUMBER */
+                                        };
+                                        
+                                        me.UpdateLoadCondition(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </Subscription>
+                <Subscription
+                 enabled="true"
+                 eventName="DataChange"
+                 source=""
+                 sourceProperty="ControlMode"
+                 sourceType="Thing">
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="Event.DataChange:Property.ControlMode">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        	ControlMode: eventData.newValue.value /* NUMBER */
+                                        };
+                                        
+                                        // result: STRING
+                                        me.UpdateControlMode(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </Subscription>
+                <Subscription
+                 enabled="true"
+                 eventName="DataChange"
+                 source=""
+                 sourceProperty="LoadConditon"
+                 sourceType="Thing">
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="Event.DataChange:Property.LoadConditon">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        	LoadCondition: eventData.newValue.value /* NUMBER */
+                                        };
+                                        
+                                        me.UpdateLoadCondition(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </Subscription>
+                <Subscription
+                 enabled="true"
+                 eventName="DataChange"
+                 source=""
+                 sourceProperty="RobotEnable"
+                 sourceType="Thing">
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="Event.DataChange:Property.RobotEnable">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        	RobotEnable: eventData.newValue.value /* NUMBER */
+                                        };
+                                        var result = me.UpdateRobotEnable(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </Subscription>
+                <Subscription
+                 enabled="true"
+                 eventName="DataChange"
+                 source=""
+                 sourceProperty="WorkingCondition"
+                 sourceType="Thing">
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="Event.DataChange:Property.WorkingCondition">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        	WorkingCondition: eventData.newValue.value /* NUMBER */
+                                        };
+                                        
+                                        me.UpdateWorkingCondition(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </Subscription>
+            </Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read>
+                    <Principal
+                     isPermitted="true"
+                     name="HrmsDevGroup"
+                     type="Group"></Principal>
+                </Read>
+                <Update>
+                    <Principal
+                     isPermitted="true"
+                     name="HrmsDevGroup"
+                     type="Group"></Principal>
+                </Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="HRMSORG:HRMSORG"
+                     type="OrganizationalUnit"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings>
+                <RemotePropertyBinding
+                 aspect.startType="readEdgeValue"
+                 foldType="NONE"
+                 name="ControlCondition"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="readEdgeValue"
+                 foldType="NONE"
+                 name="ControlMode"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="InputStatusBitFlag01"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="InputStatusBitFlag02"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="InputStatusBitFlag03"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="InputStatusBitFlag04"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="InputStatusBitFlag05"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="InputStatusBitFlag06"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="InputStatusBitFlag07"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="InputStatusBitFlag08"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="readEdgeValue"
+                 foldType="NONE"
+                 name="JobStatus"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="readEdgeValue"
+                 foldType="NONE"
+                 name="JobSubStatus"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="readEdgeValue"
+                 foldType="NONE"
+                 name="LoadConditon"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="OutputStatusBitFlag01"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="OutputStatusBitFlag02"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="OutputStatusBitFlag03"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="OutputStatusBitFlag04"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="OutputStatusBitFlag05"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="OutputStatusBitFlag06"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="OutputStatusBitFlag07"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="useDefaultValue"
+                 foldType="NONE"
+                 name="OutputStatusBitFlag08"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="readEdgeValue"
+                 foldType="NONE"
+                 name="RobotEnable"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.startType="readEdgeValue"
+                 foldType="NONE"
+                 name="WorkingCondition"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName=""
+                 timeout="0"></RemotePropertyBinding>
+            </RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="ControlCondition"></AlertDefinitions>
+                <AlertDefinitions
+                 name="ControlCondition_AccDecCtrl"></AlertDefinitions>
+                <AlertDefinitions
+                 name="ControlCondition_ServoCtrl"></AlertDefinitions>
+                <AlertDefinitions
+                 name="ControlMode"></AlertDefinitions>
+                <AlertDefinitions
+                 name="ControlMode_Current"></AlertDefinitions>
+                <AlertDefinitions
+                 name="ControlMode_Playback"></AlertDefinitions>
+                <AlertDefinitions
+                 name="ControlMode_RemoteCtrl"></AlertDefinitions>
+                <AlertDefinitions
+                 name="InputStatusBitFlag01"></AlertDefinitions>
+                <AlertDefinitions
+                 name="InputStatusBitFlag02"></AlertDefinitions>
+                <AlertDefinitions
+                 name="InputStatusBitFlag03"></AlertDefinitions>
+                <AlertDefinitions
+                 name="InputStatusBitFlag04"></AlertDefinitions>
+                <AlertDefinitions
+                 name="InputStatusBitFlag05"></AlertDefinitions>
+                <AlertDefinitions
+                 name="InputStatusBitFlag06"></AlertDefinitions>
+                <AlertDefinitions
+                 name="InputStatusBitFlag07"></AlertDefinitions>
+                <AlertDefinitions
+                 name="InputStatusBitFlag08"></AlertDefinitions>
+                <AlertDefinitions
+                 name="JobStatus"></AlertDefinitions>
+                <AlertDefinitions
+                 name="JobSubStatus"></AlertDefinitions>
+                <AlertDefinitions
+                 name="LoadCondition_HighLoadMode"></AlertDefinitions>
+                <AlertDefinitions
+                 name="LoadConditon"></AlertDefinitions>
+                <AlertDefinitions
+                 name="OutputStatusBitFlag01"></AlertDefinitions>
+                <AlertDefinitions
+                 name="OutputStatusBitFlag02"></AlertDefinitions>
+                <AlertDefinitions
+                 name="OutputStatusBitFlag03"></AlertDefinitions>
+                <AlertDefinitions
+                 name="OutputStatusBitFlag04"></AlertDefinitions>
+                <AlertDefinitions
+                 name="OutputStatusBitFlag05"></AlertDefinitions>
+                <AlertDefinitions
+                 name="OutputStatusBitFlag06"></AlertDefinitions>
+                <AlertDefinitions
+                 name="OutputStatusBitFlag07"></AlertDefinitions>
+                <AlertDefinitions
+                 name="OutputStatusBitFlag08"></AlertDefinitions>
+                <AlertDefinitions
+                 name="RobotEnable"></AlertDefinitions>
+                <AlertDefinitions
+                 name="RobotEnable_ArcStatus"></AlertDefinitions>
+                <AlertDefinitions
+                 name="RobotEnable_EnableSw"></AlertDefinitions>
+                <AlertDefinitions
+                 name="RobotEnable_GunLock"></AlertDefinitions>
+                <AlertDefinitions
+                 name="RobotEnable_MachineLock"></AlertDefinitions>
+                <AlertDefinitions
+                 name="RobotEnable_MotorOnOff"></AlertDefinitions>
+                <AlertDefinitions
+                 name="WorkingCondition"></AlertDefinitions>
+                <AlertDefinitions
+                 name="WorkingCondition_MaintCurrent"></AlertDefinitions>
+            </AlertConfigurations>
+            <InstanceRunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </EventSubscribe>
+                </Permissions>
+            </InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

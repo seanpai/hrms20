@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b167"
+ majorVersion="8"
+ minorVersion="2"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1020"
+ universal="">
+    <Projects>
+        <Project
+         dependsOn=""
+         description="HRMS 2.0 개발"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2018-03-26T17:31:28.527+09:00"
+         name="HRMS20"
+         packageVersion="1.0.0"
+         projectName="HRMS20"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTables></ConfigurationTables>
+        </Project>
+    </Projects>
+</Entities>

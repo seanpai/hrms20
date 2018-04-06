@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b167"
+ majorVersion="8"
+ minorVersion="2"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1020"
+ universal="">
+    <DataShapes>
+        <DataShape
+         baseDataShape=""
+         description="로봇 응용 기능이름 테이블"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2018-04-06T15:47:17.197+09:00"
+         name="HRC.HRMS.RobAppName.DS"
+         projectName="HRMS20"
+         tags="HRC:HRMS">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.isPrimaryKey="true"
+                 baseType="INTEGER"
+                 description="로봇 응용 기능 인덱스"
+                 name="RobAppIndex"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="로봇 응용기능 이름"
+                 name="RobAppName"
+                 ordinal="2"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

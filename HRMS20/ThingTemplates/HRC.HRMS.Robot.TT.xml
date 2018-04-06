@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b167"
+ majorVersion="8"
+ minorVersion="2"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1020"
+ universal="">
+    <ThingTemplates>
+        <ThingTemplate
+         baseThingTemplate="RemoteThing"
+         description="로봇 기구 Thing Template"
+         documentationContent=""
+         effectiveThingPackage="RemoteThing"
+         homeMashup=""
+         lastModifiedDate="2018-04-04T15:22:30.776+09:00"
+         name="HRC.HRMS.Robot.TT"
+         projectName="HRMS20"
+         tags="HRC:HRMS"
+         thingPackage=""
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read>
+                    <Principal
+                     isPermitted="true"
+                     name="HrmsDevGroup"
+                     type="Group"></Principal>
+                </Read>
+                <Update>
+                    <Principal
+                     isPermitted="true"
+                     name="HrmsDevGroup"
+                     type="Group"></Principal>
+                </Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="HRMSORG:HRMSORG"
+                     type="OrganizationalUnit"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions></ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations></ServiceImplementations>
+                <Subscriptions>
+                    <Subscription
+                     enabled="true"
+                     eventName="Timer"
+                     source="UpdateTimer"
+                     sourceProperty=""
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="Type.Thing:Entity.UpdateTimer:Event.Timer">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            // HRC.HRMS.GeneralInfo.TS
+                                            var params = {
+                                            	infoTableName : "InfoTable",
+                                            	dataShapeName : "HRC.HRMS.AxisName.DS"
+                                            };
+                                            
+                                            var AxisInfoTb = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                            var newEntry = new Object();
+                                            newEntry.AXISNAME_1 = me.AxisName1; // STRING
+                                            newEntry.AXISNAME_2 = me.AxisName2; // STRING
+                                            newEntry.RobModelName = me.RobotModel; // STRING - isPrimaryKey = true
+                                            newEntry.AXISNAME_12 = undefined; // STRING
+                                            newEntry.AXISNAME_13 = undefined; // STRING
+                                            newEntry.AXISNAME_14 = undefined; // STRING
+                                            newEntry.AXISNAME_15 = undefined; // STRING
+                                            newEntry.AXISNAME_10 = undefined; // STRING
+                                            newEntry.AXISNAME_11 = undefined; // STRING
+                                            newEntry.AXISNAME_3 = me.AxisName3; // STRING
+                                            newEntry.AXISNAME_4 = me.AxisName4; // STRING
+                                            newEntry.AXISNAME_5 = me.AxisName5; // STRING
+                                            newEntry.AXISNAME_6 = me.AxisName6; // STRING
+                                            newEntry.AXISNAME_7 = undefined; // STRING
+                                            newEntry.AXISNAME_16 = undefined; // STRING
+                                            newEntry.AXISNAME_8 = undefined; // STRING
+                                            newEntry.TotalAxisNum = me.TotalAxisNumber; // LONG
+                                            newEntry.AXISNAME_9 = undefined; // STRING
+                                            AxisInfoTb.AddRow(newEntry);
+                                            
+                                            var params1 = {
+                                            	AxisInfoTable: AxisInfoTb /* INFOTABLE */
+                                            };
+                                            
+                                            // result: INFOTABLE dataShape: "HRC.HRMS.AxisName.DS"
+                                            var result = me.UpdateAxisName(params1);
+                                            
+                                            
+                                            var params2 = {
+                                            	WorkRole: me.WorkRole /* NUMBER */
+                                            };
+                                            // result: STRING
+                                            me.UpdateRobApp(params2);
+                                            
+                                            // HRC.HRMS.StatusModeInfo.TS
+                                            
+                                            var params = {
+                                                ControlCondition: me.ControlCondition /* NUMBER */
+                                            };
+                                            var result = me.UpdateControlCondition(params);
+                                            
+                                            var params = {
+                                                ControlMode: me.ControlMode /* NUMBER */
+                                            };
+                                            var result = me.UpdateControlMode(params);
+                                            
+                                            var params = {
+                                                LoadCondition: me.LoadConditon /* NUMBER */
+                                            };
+                                            var result = me.UpdateLoadCondition(params);
+                                            
+                                            var params = {
+                                                RobotEnable: me.RobotEnable /* NUMBER */
+                                            };
+                                            var result = me.UpdateRobotEnable(params);
+                                            
+                                            var params = {
+                                                WorkingCondition: me.WorkingCondition /* NUMBER */
+                                            };
+                                            me.UpdateWorkingCondition(params);
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
+            </ThingShape>
+            <ImplementedShapes>
+                <ImplementedShape
+                 name="HRC.HRMS.StatusModeInfo.TS"
+                 type="ThingShape"></ImplementedShape>
+                <ImplementedShape
+                 name="HRC.HRMS.OperationTime.TS"
+                 type="ThingShape"></ImplementedShape>
+                <ImplementedShape
+                 name="HRC.HRMS.ProgramInfo.TS"
+                 type="ThingShape"></ImplementedShape>
+                <ImplementedShape
+                 name="HRC.HRMS.GeneralInfo.TS"
+                 type="ThingShape"></ImplementedShape>
+            </ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read>
+                    <Principal
+                     isPermitted="true"
+                     name="HrmsDevGroup"
+                     type="Group"></Principal>
+                </Read>
+                <Update>
+                    <Principal
+                     isPermitted="true"
+                     name="HrmsDevGroup"
+                     type="Group"></Principal>
+                </Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal
+                         isPermitted="true"
+                         name="HrmsDevGroup"
+                         type="Group"></Principal>
+                    </EventSubscribe>
+                </Permissions>
+            </InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="HRMSORG:HRMSORG"
+                     type="OrganizationalUnit"></Principal>
+                </Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

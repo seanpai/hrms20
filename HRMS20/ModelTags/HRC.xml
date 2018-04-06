@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b167"
+ majorVersion="8"
+ minorVersion="2"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1020"
+ universal="">
+    <ModelTags>
+        <ModelTagVocabulary
+         description="Hyundai Robotics Company"
+         documentationContent=""
+         homeMashup=""
+         isDynamic="false"
+         lastModifiedDate="2018-03-26T17:33:38.683+09:00"
+         name="HRC"
+         projectName="HRMS20"
+         tags="HRC:HRMS">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTables></ConfigurationTables>
+            <VocabularyTerm
+             description=""
+             name="HRMS"></VocabularyTerm>
+        </ModelTagVocabulary>
+    </ModelTags>
+</Entities>
